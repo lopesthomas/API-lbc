@@ -5,7 +5,7 @@ const fs = require("fs");
 exports.allSearch = (req, res, next) => {const results = lbc.searchMultiples(
 	{
 		category: lbc.CATEGORY.ANIMAUX,
-		keywords: `${req.query.q}`,
+		keywords: `chat`,
         locations: ['Ain'],
 		limit: 2,
 	},

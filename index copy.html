@@ -18,7 +18,7 @@
         // Fonction pour rechercher les annonces en fonction du terme saisi
         function searchAds() {
             const searchTerm = document.getElementById('search').value;
-            const apiUrl = `http://localhost:4000/api/search?q=${encodeURIComponent(searchTerm)}`;
+            const apiUrl = `https://api-lbc.onrender.com/api/search?q=${encodeURIComponent(searchTerm)}`;
 
             fetch(apiUrl)
                 .then(response => response.json())

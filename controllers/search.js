@@ -11,7 +11,7 @@ exports.allSearch = (req, res, next) => {const results = lbc.searchMultiples(
 	},
 	10,
     console.log("searchSchema"),
-	console.log(req)
+	//console.log(req)
 ).then((results) => res.status(200).json(results))
 .catch((error) => res.status(400).json({ error }))};
 

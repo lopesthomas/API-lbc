@@ -1,5 +1,5 @@
 //const Search = require("../models/Search");
-const lbc = require("leboncoin-api-search");
+const lbc = require("../leboncoin-api-search/index.ts");
 const fs = require("fs");
 
 exports.allSearch = (req, res, next) => {const results = lbc.searchMultiples(

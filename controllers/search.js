@@ -1,15 +1,15 @@
-const Search = require("../models/Search");
+//const Search = require("../models/Search");
 const lbc = require("leboncoin-api-search");
 const fs = require("fs");
 
 exports.allSearch = (req, res, next) => {const results = lbc.searchMultiples(
 	{
 		category: lbc.CATEGORY.ANIMAUX,
-		keywords: `chat`,
+		keywords: `${req.query.q}`,
         locations: ['Ain'],
 		limit: 2,
 	},
-	10,
+	1,
     console.log("searchSchema"),
 	//console.log(req)
 ).then((results) => res.status(200).json(results))

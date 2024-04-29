@@ -2,7 +2,7 @@
 const lbc = require("../leboncoin-api-search/index.ts");
 const fs = require("fs");
 
-exports.allSearch = (req, res, next) => {const results = lbc.searchMultiples(
+exports.allSearch = (req, res, next) => {const results = lbc.search(
 	{
 		category: lbc.CATEGORY.ANIMAUX,
 		keywords: `${req.query.q}`,
